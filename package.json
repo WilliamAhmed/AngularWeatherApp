@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 5000",
-    "build": "ng build",
+    "start": "npm run standardize && ng serve --port 5000",
+    "build": "npm run standardize && ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "standardize": "prettier **/*.ts --write"
   },
   "prettier": {
     "printWidth": 90,
